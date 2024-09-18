@@ -1,6 +1,5 @@
 import { AfterViewChecked, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import hljs from 'highlight.js';
-import 'highlight.js/styles/portfolio-theme.css';
 import TypeIt from "typeit";
 
 @Component({
