@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'SUSE';
+    src: url('assets/fonts/SUSE-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'SUSE';
+    src: url('assets/fonts/SUSE-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'SpaceMono';
+    src: url('assets/fonts/SpaceMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'SpaceMono';
+    src: url('assets/fonts/SpaceMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SUSE';
+    src: url('assets/fonts/SUSE-Light.ttf') format('truetype');
+    font-weight: light;
+    font-style: light;
+}
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+*{
+    font-family: 'SUSE';
+}
+span{
+    font-family: SpaceMono;
+    font-weight: bold;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

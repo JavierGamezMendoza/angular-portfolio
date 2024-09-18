@@ -32,7 +32,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/typeit/dist/index.es.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -92,7 +94,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/typeit/dist/index.es.js"
+            ]
           }
         }
       }

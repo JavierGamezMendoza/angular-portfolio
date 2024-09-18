@@ -1,0 +1,32 @@
+<section id="footer-container">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave" id="waveTop1">
+        <path
+            d="M0,192L40,170.7C80,149,160,107,240,85.3C320,64,400,64,480,85.3C560,107,640,149,720,154.7C800,160,880,128,960,106.7C1040,85,1120,75,1200,80C1280,85,1360,107,1400,117.3L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+        </path>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave" id="waveTop2">
+        <path
+            d="M0,192L34.3,160C68.6,128,137,64,206,53.3C274.3,43,343,85,411,138.7C480,192,549,256,617,245.3C685.7,235,754,149,823,112C891.4,75,960,85,1029,96C1097.1,107,1166,117,1234,149.3C1302.9,181,1371,235,1406,261.3L1440,288L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z">
+        </path>
+    </svg>
+
+    <h1>¡Contáctame!</h1>
+
+    <div id="form-container">
+        <form (submit)="sendEmail($event)">
+            <label for="name">Nombre:</label>
+            <input type="text" name="name" [(ngModel)]="name" required placeholder="Introduce tu nombre">
+            <label for="email">Email:</label>
+            <input type="email" name="email" [(ngModel)]="email" required placeholder="Introduce tu email">
+            <label for="message">Mensaje:</label>
+            <textarea type="text" name="message" [(ngModel)]="message" required placeholder="Introduce un mensaje"></textarea>
+            <button type="submit">Enviar <i class="fa-solid fa-paper-plane"></i></button>
+            <div *ngIf="successMessage" class="success-message">
+                {{ successMessage }} <i class="fa fa-check"></i>
+            </div>
+            <div *ngIf="errorMessage" class="error-message">
+                {{ errorMessage }} <i class="fa fa-xmark"></i>
+            </div>
+        </form>
+    </div>
+</section>

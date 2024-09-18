@@ -1,0 +1,142 @@
+#tech-stack-container {
+    position: relative;
+    color: rgb(238, 238, 238);
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(80, 147, 185);
+
+    #stack-info {
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        text-align: left;
+
+        #codeBlockContainer {
+            width: 50%;
+            height: 100vh;
+
+            pre {
+                width: 100%;
+                code {
+                    height: 90vh;
+                }
+            }
+        }
+
+        #stack-graphics {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px; /* Espacio entre las imágenes */
+
+            .card {
+                backdrop-filter: blur(8px);
+                background-color: rgba(255, 255, 255, 0.541);
+                display: flex;
+                flex-direction: column;
+                padding: 15px;
+                border-radius: 10px;
+                margin: 10px;
+
+                b {
+                    color: #072736;
+                }
+
+                .card-items {
+                    display: block;
+                    span {
+                        display: inline-block;
+                        font-size: 16px;
+                        font-weight: normal;
+                        padding: 0 8px;
+                        margin: 4px;
+                        border-radius: 15px;
+                        background-color: #186488;
+                    }
+                }
+            }
+        }
+    }
+
+    h1 {
+        z-index: 3;
+        font-size: 30px;
+        padding: 0;
+        margin: 0 10px;
+    }
+
+    h2 {
+        z-index: 3;
+        font-size: 30px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .wave {
+        height: fit-content;
+        width: 100%;
+        position: absolute;
+        filter: drop-shadow(2px 2px 4px rgb(0 0 0 / 0.4));
+    }
+
+    #waveBottom1 {
+        bottom: -10px;
+        z-index: 0;
+        fill: rgb(71, 81, 179);
+    }
+
+    /* Media Queries para diferentes tamaños de pantalla */
+    @media (max-width: 800px) {
+        height: auto;
+        h1{
+            font-size: 32px;
+            text-align: center;
+            margin: 10px;
+        }
+        #stack-info {
+            flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+            align-items: center; /* Centra los elementos */
+            width: 100%; /* Aumenta el ancho del contenedor */
+            #codeBlockContainer {
+                width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+                height: auto; /* Ajusta la altura automáticamente */
+                pre{
+                    code{
+                        border-radius: 0;
+                        font-size: 11px;
+                        height: 60vh;
+                    }
+                }
+            }
+    
+            #stack-graphics {
+                width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+                margin-right: 0; /* Elimina margen derecho */
+            }
+        }
+
+    }
+
+    @media (max-width: 500px) {
+        h1 {
+            font-size: 22px; /* Reduce aún más el tamaño del título */
+        }
+
+        h2 {
+            font-size: 20px; /* Reduce aún más el tamaño del subtítulo */
+        }
+
+        .card {
+            padding: 10px; /* Reduce el padding de las tarjetas */
+        }
+
+        .card-items span {
+            font-size: 14px; /* Ajusta el tamaño de los textos en las tarjetas */
+        }
+    }
+}
